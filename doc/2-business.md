@@ -1,4 +1,4 @@
-## 支付服务统计接口
+## 支付服务统计接口（需通过鉴权验证）
 
 
 ### 2. 业务管理统计接口
@@ -41,6 +41,7 @@
 | 丨丨 accType | true | JSONOBJECT | | 支付渠道 |
 | 丨丨丨 alipayCount | true | int | 支付宝支付次数 | |
 | 丨丨丨 wechatpayCount | true | int | 微信支付次数 | |
+| 丨丨丨 unknownCount | true | int | 其他无法确定的支付次数 | |
 | 丨丨 payMethod | true | JSONOBJECT | | 支付方式 |
 | 丨丨丨 freePwdCount | true | int | 免密支付次数 | |
 | 丨丨丨 proactiveCount | true | int | 主动支付次数 | <br> |
@@ -62,7 +63,8 @@ http://hostname:port/v1/payment/operation/business?startDate=2011-11-11%2011%3A1
       "totalCount": 2000,
       "accType": {
         "alipayCount": 1500,
-        "wechatpayCount": 500
+        "wechatpayCount": 499,
+        "unknownCount": 1
       },
       "payMethod": {
         "freePwdCount": 70,
