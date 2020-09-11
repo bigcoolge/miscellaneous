@@ -19,6 +19,7 @@
 rec[i][j] 表示从第i个房子到第j个房子，用一个邮箱最小的花费。可以提前预处理好所有的情况。
 
 ================
+```java
 class Solution {
 public:
     int minDistance(vector<int>& houses, int K) {
@@ -45,4 +46,4 @@ public:
         return dp[n-1][K];
     }
 };
-
+```
